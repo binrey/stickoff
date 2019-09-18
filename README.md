@@ -1,0 +1,2 @@
+# stickoff
+no selfie-stick
