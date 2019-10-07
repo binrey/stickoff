@@ -1,7 +1,16 @@
 import numpy as np
-import os
 import pandas as pd
-from matplotlib import pyplot as plt
-from PIL import Image
-import imgaug as ia
-from imgaug import augmenters as iaa
+from utils import *
+
+
+img_size = [224, 224]
+imw = img_size[0]
+imh = img_size[1]
+n = 2
+img, kp = load_img(n, img_size, True)
+
+show_img(img,
+         [min(kp[0].x, kp[1].x), kp[0].y],
+         [max(kp[0].x, kp[1].x), kp[1].y],
+         [kp[2].x, kp[2].y])
+
